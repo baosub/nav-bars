@@ -1,5 +1,9 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Link from "next/link";
+import { Box } from '@mui/material';
+
 
 const pages = [
     { title: 'Home', path: '/' },
@@ -9,18 +13,35 @@ const pages = [
   ];
 
 const NavBar = () => {
+    const [open, setOpen] = useState(false);
+
+    const toggleMenu = ()=> setOpen(!open);
   return (
-    <div>
+    <Box >
+        {open ? <Box sx={{width: '100vw', height: '100vh', bgcolor: 'grey'}} >
+
+            {
+            pages.map((page)=>(
+                <Link onClick={toggleMenu} href={page.path} key={page.title}>{page.title}</Link>
+
+            ))
+
+        }
+        </Box> : <><button onClick={toggleMenu}>botton para desplegar el menu</button></>}
+
+
+
         
-        {
+        
+      {/*{
             pages.map((page)=>(
                 <Link href={page.path} key={page.title}>{page.title}</Link>
 
             ))
 
-        }
+        } */}  
       
-    </div>
+    </Box>
   )
 }
 
