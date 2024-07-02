@@ -37,8 +37,8 @@ const NavBar = () => {
                 
                 
                 sx={{
-                bgcolor: pathname === page.path ? 'red' : 'white',
-                color: pathname === page.path ? 'green': 'pink',
+                bgcolor: pathname === page.path ? 'black' : 'white',
+                color: pathname === page.path ? 'white': 'pink',
                 marginRight: 2,
                 textDecoration: 'none',
                 '&:hover': {

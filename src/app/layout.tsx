@@ -19,15 +19,16 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AppRouterCacheProvider>
-        <ThemeProvider theme={theme}>
-        </ThemeProvider>
-        <CssBaseline/>
-        <NavBar/>
-        {children}
+          <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <NavBar />
+          {children}
+          </ThemeProvider>
+          
 
         </AppRouterCacheProvider>
-        
-        </body>
+
+      </body>
     </html>
   )
 }
