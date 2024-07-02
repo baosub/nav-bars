@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Link from "next/link";
 import { Box } from '@mui/material';
 import { usePathname } from 'next/navigation';
+import './navActive.css'
 
 
 const pages = [
@@ -34,11 +35,12 @@ const NavBar = () => {
                 <Box 
                 component={Link} onClick={toggleMenu}
                 href={page.path} key={page.title} passHref
+
+                className={`link ${pathname === page.path ? 'active' : ''}`} 
                 
                 
                 sx={{
-                bgcolor: pathname === page.path ? 'black' : 'white',
-                color: pathname === page.path ? 'white': 'pink',
+                
                 marginRight: 2,
                 textDecoration: 'none',
                 '&:hover': {
