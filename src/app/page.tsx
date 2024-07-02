@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <Button>Home</Button>
 
-      <Typography variant='h2' sx={{fontWeight: 1000}}> This is responsive h1</Typography>
+      <Typography variant='h2' sx={{fontWeight: 700}}> This is responsive h1</Typography>
     </>
   )
 }
